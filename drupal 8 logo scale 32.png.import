@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/drupal 8 logo scale 32.png-5d0c9f2ca51162d9c58b9c89518d0ec1.stex"
+
+[deps]
+
+source_file="res://drupal 8 logo scale 32.png"
+source_md5="f310f9c85a9cd264ca3b89a7fbeb6894"
+
+dest_files=[ "res://.import/drupal 8 logo scale 32.png-5d0c9f2ca51162d9c58b9c89518d0ec1.stex" ]
+dest_md5="b9d03959fef0905cd1105707a284c9ca"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
