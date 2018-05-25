@@ -24,9 +24,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 		$Sprite.flip_h = false
+		if get_floor_velocity().x > 0:
+			motion.x += get_floor_velocity().x 
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 		$Sprite.flip_h = true
+		if get_floor_velocity().x < 0:
+			motion.x += get_floor_velocity().x
 	else:
 		friction = true
 	
@@ -42,8 +46,7 @@ func _physics_process(delta):
 			motion.y = -min(launch_timer, 1000)
 			launch = false
 			launch_timer = 0
-					
-	# Kinematic body movement
+	
 	motion = move_and_slide(motion, UP)
 
 func _input(event):
