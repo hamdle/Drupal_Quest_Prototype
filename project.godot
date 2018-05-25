@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="DrupalQuest"
+config/name="Drupal Quest"
 run/main_scene="res://drupal-home.tscn"
 config/icon="res://icon.png"
 
