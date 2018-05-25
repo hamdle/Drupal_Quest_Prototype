@@ -2,16 +2,17 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 const GRAVITY = 15
-const ACCELERATION = 72
+const ACCELERATION = 50
 const MAX_SPEED = 300
-const JUMP_HEIGHT = 475
-const JETPACK_HEIGHT = 300
+const JUMP_HEIGHT = 400
+const MAX_LAUNCH = 800
 
 var motion = Vector2()
+var launch_timer = 0
+var launch = false
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+
 	pass
 
 func _physics_process(delta):
@@ -29,17 +30,25 @@ func _physics_process(delta):
 	else:
 		friction = true
 	
-	var on_floor = is_on_floor()
-	if Input.is_action_just_pressed("ui_up"):
-		if on_floor == true:
+	if is_on_floor():
+		if Input.is_action_just_pressed("ui_up"):
 			motion.y = -JUMP_HEIGHT
-		else:
-			motion.y = -JETPACK_HEIGHT
-	
-	if on_floor == true:
 		if friction:
 			motion.x = lerp(motion.x, 0, 0.5)
-
-				
+	
+	if launch == true:
+		if is_on_floor():
+			print("Launching: " + String(launch_timer) + " Actual launch of: " + String(min(launch_timer, 1000)))
+			motion.y = -min(launch_timer, 1000)
+			launch = false
+			launch_timer = 0
+					
 	# Kinematic body movement
 	motion = move_and_slide(motion, UP)
+
+func _input(event):
+	if Input.is_action_just_pressed("ui_down"):
+		launch_timer = OS.get_ticks_msec()
+	if Input.is_action_just_released("ui_down"):
+		launch_timer = OS.get_ticks_msec() - launch_timer
+		launch = true

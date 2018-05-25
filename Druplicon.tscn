@@ -3,12 +3,13 @@
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://drupal 8 logo scale 32.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 13.1261
+radius = 14.0194
+height = 0.751413
 
-[node name="Druplicon" type="KinematicBody2D"]
+[node name="Druplicon" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1

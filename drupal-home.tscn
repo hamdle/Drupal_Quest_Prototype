@@ -77,12 +77,12 @@ radius = 22.3263
 [sub_resource type="RectangleShape2D" id=17]
 
 custom_solver_bias = 0.0
-extents = Vector2( 84.1914, 69.2435 )
+extents = Vector2( 84.1914, 72.861 )
 
 [sub_resource type="RectangleShape2D" id=18]
 
 custom_solver_bias = 0.0
-extents = Vector2( 36.0963, 40.2901 )
+extents = Vector2( 36.9379, 44.8462 )
 
 [node name="Node1" type="Node" index="0"]
 
@@ -275,7 +275,7 @@ shape = SubResource( 17 )
 
 [node name="MB2" type="CollisionShape2D" parent="HomePage/Menu/MenuBlock" index="2"]
 
-position = Vector2( 442.251, 8.95957 )
+position = Vector2( 441.37, 9.3997 )
 shape = SubResource( 18 )
 
 [node name="Druplicon" parent="." index="1" instance=ExtResource( 7 )]
