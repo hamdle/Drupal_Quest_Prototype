@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Area2D.gd" type="Script" id=1]
 [ext_resource path="res://top-nav.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://for-devs.png" type="Texture" id=8]
 [ext_resource path="res://footer.png" type="Texture" id=9]
 [ext_resource path="res://Druplicon.tscn" type="PackedScene" id=10]
+[ext_resource path="res://OldDruplicon.tscn" type="PackedScene" id=11]
+[ext_resource path="res://BigD8.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -85,22 +87,7 @@ extents = Vector2( 107.526, 56.6042 )
 [sub_resource type="RectangleShape2D" id=22]
 
 custom_solver_bias = 0.0
-extents = Vector2( 19.6234, 90.3902 )
-
-[sub_resource type="RectangleShape2D" id=23]
-
-custom_solver_bias = 0.0
-extents = Vector2( 75.8539, 12.2383 )
-
-[sub_resource type="RectangleShape2D" id=24]
-
-custom_solver_bias = 0.0
-extents = Vector2( 47.6517, 7.86902 )
-
-[sub_resource type="RectangleShape2D" id=25]
-
-custom_solver_bias = 0.0
-extents = Vector2( 62.3486, 10 )
+extents = Vector2( 14.3613, 90.3902 )
 
 [sub_resource type="RectangleShape2D" id=17]
 
@@ -117,13 +104,13 @@ extents = Vector2( 617.135, 25.2876 )
 custom_solver_bias = 0.0
 extents = Vector2( 35.2592, 772.493 )
 
-[node name="Node1" type="Node" index="0"]
+[node name="Node1" type="Node"]
 
-[node name="HomePage" type="Node2D" parent="." index="0"]
+[node name="LevelHome" type="Node2D" parent="." index="0"]
 
 position = Vector2( 512, 37 )
 
-[node name="Menu" type="Area2D" parent="HomePage" index="0"]
+[node name="Menu" type="Area2D" parent="LevelHome" index="0"]
 
 editor/display_folded = true
 input_pickable = true
@@ -136,18 +123,18 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="TopNav" type="Sprite" parent="HomePage/Menu" index="0"]
+[node name="TopNav" type="Sprite" parent="LevelHome/Menu" index="0"]
 
 position = Vector2( 0, -1 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomePage/Menu" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/Menu" index="1"]
 
 position = Vector2( 440.441, -0.0541611 )
 shape = SubResource( 1 )
 
-[node name="MenuBlock" type="StaticBody2D" parent="HomePage/Menu" index="2"]
+[node name="MenuBlock" type="StaticBody2D" parent="LevelHome/Menu" index="2"]
 
 z_index = 1
 input_pickable = false
@@ -159,31 +146,33 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="HomePage/Menu/MenuBlock" index="0"]
+[node name="Sprite" type="Sprite" parent="LevelHome/Menu/MenuBlock" index="0"]
 
 position = Vector2( 394.104, 73 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MB1" type="CollisionShape2D" parent="HomePage/Menu/MenuBlock" index="1"]
+[node name="MB1" type="CollisionShape2D" parent="LevelHome/Menu/MenuBlock" index="1"]
 
 position = Vector2( 394.156, 107.966 )
 shape = SubResource( 2 )
 
-[node name="MB2" type="CollisionShape2D" parent="HomePage/Menu/MenuBlock" index="2"]
+[node name="MB2" type="CollisionShape2D" parent="LevelHome/Menu/MenuBlock" index="2"]
 
 position = Vector2( 441.37, 9.3997 )
 shape = SubResource( 3 )
 
-[node name="Banner" type="Node" parent="HomePage" index="1"]
+[node name="Banner" type="Node" parent="LevelHome" index="1"]
 
-[node name="BlueHeader" type="Sprite" parent="HomePage/Banner" index="0"]
+editor/display_folded = true
+
+[node name="BlueHeader" type="Sprite" parent="LevelHome/Banner" index="0"]
 
 position = Vector2( 512, 259 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="DrupalText" type="StaticBody2D" parent="HomePage/Banner" index="1"]
+[node name="DrupalText" type="StaticBody2D" parent="LevelHome/Banner" index="1"]
 
 editor/display_folded = true
 position = Vector2( 531.012, 268.946 )
@@ -198,75 +187,77 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="DrupalLogo" type="Sprite" parent="HomePage/Banner/DrupalText" index="0"]
+[node name="DrupalLogo" type="Sprite" parent="LevelHome/Banner/DrupalText" index="0"]
 
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="D1" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="1"]
+[node name="D1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="1"]
 
 position = Vector2( -222.673, -13.4153 )
 shape = SubResource( 4 )
 
-[node name="D2" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="2"]
+[node name="D2" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="2"]
 
 position = Vector2( -198.97, -16.6032 )
 shape = SubResource( 5 )
 
-[node name="R1" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="3"]
+[node name="R1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="3"]
 
 position = Vector2( -116.597, -2.38858 )
 shape = SubResource( 6 )
 
-[node name="U2" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="4"]
+[node name="U2" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="4"]
 
 position = Vector2( 21.5339, -2.41852 )
 shape = SubResource( 8 )
 
-[node name="U3" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="5"]
+[node name="U3" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="5"]
 
 position = Vector2( -29.5244, 29.6217 )
 shape = SubResource( 9 )
 
-[node name="P1" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="6"]
+[node name="P1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="6"]
 
 position = Vector2( 32, 25.3429 )
 shape = SubResource( 11 )
 
-[node name="P2" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="7"]
+[node name="P2" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="7"]
 
 position = Vector2( 65.5024, -0.0540161 )
 shape = SubResource( 12 )
 
-[node name="A1" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="8"]
+[node name="A1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="8"]
 
 position = Vector2( 167.63, -0.59436 )
 shape = SubResource( 12 )
 
-[node name="A2" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="9"]
+[node name="A2" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="9"]
 
 position = Vector2( 200.592, 25.3429 )
 shape = SubResource( 13 )
 
-[node name="L1" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="10"]
+[node name="L1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="10"]
 
 position = Vector2( 233.976, -13.509 )
 shape = SubResource( 14 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomePage/Banner/DrupalText" index="11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="11"]
 
 position = Vector2( 115.825, -1.29413 )
 shape = SubResource( 20 )
 
-[node name="Tre" type="Node" parent="HomePage" index="2"]
+[node name="Tre" type="Node" parent="LevelHome" index="2"]
 
-[node name="WhiteBackground" type="Sprite" parent="HomePage/Tre" index="0"]
+editor/display_folded = true
+
+[node name="WhiteBackground" type="Sprite" parent="LevelHome/Tre" index="0"]
 
 position = Vector2( 512, 664 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ForDevelopers" type="KinematicBody2D" parent="HomePage/Tre" index="1"]
+[node name="ForDevelopers" type="KinematicBody2D" parent="LevelHome/Tre" index="1"]
 
 position = Vector2( 192.273, 662.65 )
 input_pickable = false
@@ -276,43 +267,29 @@ collision/safe_margin = 0.08
 script = ExtResource( 7 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
-[node name="Sprite" type="Sprite" parent="HomePage/Tre/ForDevelopers" index="0"]
+[node name="Sprite" type="Sprite" parent="LevelHome/Tre/ForDevelopers" index="0"]
 
 scale = Vector2( 1, 1 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomePage/Tre/ForDevelopers" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/Tre/ForDevelopers" index="1"]
 
 position = Vector2( 1.15712, -53.3556 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 21 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="HomePage/Tre/ForDevelopers" index="2"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelHome/Tre/ForDevelopers" index="2"]
 
-position = Vector2( -0.3806, 80.1527 )
+position = Vector2( 0.939789, 80.1526 )
 rotation = 1.5708
 scale = Vector2( 1, 1 )
 shape = SubResource( 22 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HomePage/Tre/ForDevelopers" index="3"]
+[node name="Footer" type="StaticBody2D" parent="LevelHome" index="3"]
 
-position = Vector2( 0.794434, 112.014 )
-shape = SubResource( 23 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="HomePage/Tre/ForDevelopers" index="4"]
-
-position = Vector2( 0.794434, 131.875 )
-shape = SubResource( 24 )
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="HomePage/Tre/ForDevelopers" index="5"]
-
-position = Vector2( 1.19165, 52.0351 )
-shape = SubResource( 25 )
-
-[node name="Footer" type="StaticBody2D" parent="HomePage" index="3"]
-
+editor/display_folded = true
 position = Vector2( -0.517456, 1078.73 )
 input_pickable = false
 collision_layer = 1
@@ -326,17 +303,18 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="HomePage/Footer" index="0"]
+[node name="Sprite" type="Sprite" parent="LevelHome/Footer" index="0"]
 
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomePage/Footer" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/Footer" index="1"]
 
 shape = SubResource( 17 )
 
-[node name="PageBounds" type="StaticBody2D" parent="HomePage" index="4"]
+[node name="PageBounds" type="StaticBody2D" parent="LevelHome" index="4"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -345,22 +323,22 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomePage/PageBounds" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/PageBounds" index="0"]
 
 position = Vector2( 0.590576, -64.5679 )
 shape = SubResource( 18 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HomePage/PageBounds" index="1"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelHome/PageBounds" index="1"]
 
 position = Vector2( 5.40045, 1338.48 )
 shape = SubResource( 18 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="HomePage/PageBounds" index="2"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LevelHome/PageBounds" index="2"]
 
 position = Vector2( 549.115, 656.299 )
 shape = SubResource( 19 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="HomePage/PageBounds" index="3"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelHome/PageBounds" index="3"]
 
 position = Vector2( -549.38, 638.949 )
 shape = SubResource( 19 )
@@ -368,5 +346,22 @@ shape = SubResource( 19 )
 [node name="Druplicon" parent="." index="1" instance=ExtResource( 10 )]
 
 position = Vector2( 760.378, 149.966 )
+
+[node name="OldDruplicon" parent="." index="2" instance=ExtResource( 11 )]
+
+position = Vector2( 149.341, 856.513 )
+
+[node name="BigD8" parent="." index="3" instance=ExtResource( 12 )]
+
+position = Vector2( 100, 852 )
+scale = Vector2( 1.33, 1.33 )
+STEP = 1.0
+BOUNCE_HEIGHT = 12
+
+[node name="BigD9" parent="." index="4" instance=ExtResource( 12 )]
+
+position = Vector2( 55, 852 )
+scale = Vector2( 1.33, 1.33 )
+BOUNCE_HEIGHT = 12
 
 

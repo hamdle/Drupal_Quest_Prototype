@@ -1,18 +1,18 @@
 extends KinematicBody2D
 
+# Physics and Jump
 const UP = Vector2(0, -1)
 const GRAVITY = 10
-const ACCELERATION = 50
-const MAX_SPEED = 300
-const JUMP_HEIGHT = 400
-const MAX_LAUNCH = 800
+const ACCELERATION = 20
+const MAX_SPEED = 200
+const JUMP_HEIGHT = 300
+const MAX_LAUNCH = 700
 
 var motion = Vector2()
 var launch_timer = 0
 var launch = false
 
-func _ready():
-
+func _process(delta):
 	pass
 
 func _physics_process(delta):
@@ -23,12 +23,12 @@ func _physics_process(delta):
 	# Controls
 	if Input.is_action_pressed("ui_right"):
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
-		$Sprite.flip_h = false
+		$KinematicBody2D/Sprite.flip_h = false
 		if get_floor_velocity().x > 0:
 			motion.x += get_floor_velocity().x 
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
-		$Sprite.flip_h = true
+		$KinematicBody2D/Sprite.flip_h = true
 		if get_floor_velocity().x < 0:
 			motion.x += get_floor_velocity().x
 	else:
@@ -42,8 +42,8 @@ func _physics_process(delta):
 	
 	if launch == true:
 		if is_on_floor():
-			print("Launching: " + String(launch_timer) + " Actual launch of: " + String(min(launch_timer, 1000)))
-			motion.y = -min(launch_timer, 1000)
+			print("Launching: " + String(launch_timer) + " Actual launch of: " + String(min(launch_timer, MAX_LAUNCH)))
+			motion.y = -min(launch_timer, MAX_LAUNCH)
 			launch = false
 			launch_timer = 0
 	
