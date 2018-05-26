@@ -44,67 +44,67 @@ height = 20.0
 custom_solver_bias = 0.0
 extents = Vector2( 69.5986, 42.2175 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.782, 41.054 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 23.4321, 8.64313 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 43.9033 )
 
-[sub_resource type="CircleShape2D" id=12]
+[sub_resource type="CircleShape2D" id=10]
 
 custom_solver_bias = 0.0
 radius = 47.079
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=11]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10.8733, 15.7398 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=12]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12.7519, 56.4368 )
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=13]
 
 custom_solver_bias = 0.0
 extents = Vector2( 108.256, 34.6807 )
 
-[sub_resource type="RectangleShape2D" id=21]
+[sub_resource type="RectangleShape2D" id=14]
 
 custom_solver_bias = 0.0
 extents = Vector2( 107.526, 56.6042 )
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=15]
 
 custom_solver_bias = 0.0
 extents = Vector2( 14.3613, 90.3902 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=16]
 
 custom_solver_bias = 0.0
 extents = Vector2( 508.585, 230.552 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=17]
 
 custom_solver_bias = 0.0
 extents = Vector2( 617.135, 25.2876 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=18]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35.2592, 772.493 )
 
-[node name="Node1" type="Node"]
+[node name="Node1" type="Node" index="0"]
 
 [node name="LevelHome" type="Node2D" parent="." index="0"]
 
@@ -210,42 +210,42 @@ shape = SubResource( 6 )
 [node name="U2" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="4"]
 
 position = Vector2( 21.5339, -2.41852 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="U3" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="5"]
 
 position = Vector2( -29.5244, 29.6217 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="P1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="6"]
 
 position = Vector2( 32, 25.3429 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="P2" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="7"]
 
 position = Vector2( 65.5024, -0.0540161 )
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="A1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="8"]
 
 position = Vector2( 167.63, -0.59436 )
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="A2" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="9"]
 
 position = Vector2( 200.592, 25.3429 )
-shape = SubResource( 13 )
+shape = SubResource( 11 )
 
 [node name="L1" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="10"]
 
 position = Vector2( 233.976, -13.509 )
-shape = SubResource( 14 )
+shape = SubResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/Banner/DrupalText" index="11"]
 
 position = Vector2( 115.825, -1.29413 )
-shape = SubResource( 20 )
+shape = SubResource( 13 )
 
 [node name="Tre" type="Node" parent="LevelHome" index="2"]
 
@@ -269,22 +269,19 @@ _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibi
 
 [node name="Sprite" type="Sprite" parent="LevelHome/Tre/ForDevelopers" index="0"]
 
-scale = Vector2( 1, 1 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/Tre/ForDevelopers" index="1"]
 
 position = Vector2( 1.15712, -53.3556 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 21 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelHome/Tre/ForDevelopers" index="2"]
 
 position = Vector2( 0.939789, 80.1526 )
 rotation = 1.5708
-scale = Vector2( 1, 1 )
-shape = SubResource( 22 )
+shape = SubResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Footer" type="StaticBody2D" parent="LevelHome" index="3"]
@@ -310,7 +307,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/Footer" index="1"]
 
-shape = SubResource( 17 )
+shape = SubResource( 16 )
 
 [node name="PageBounds" type="StaticBody2D" parent="LevelHome" index="4"]
 
@@ -326,22 +323,22 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelHome/PageBounds" index="0"]
 
 position = Vector2( 0.590576, -64.5679 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelHome/PageBounds" index="1"]
 
 position = Vector2( 5.40045, 1338.48 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="LevelHome/PageBounds" index="2"]
 
 position = Vector2( 549.115, 656.299 )
-shape = SubResource( 19 )
+shape = SubResource( 18 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelHome/PageBounds" index="3"]
 
 position = Vector2( -549.38, 638.949 )
-shape = SubResource( 19 )
+shape = SubResource( 18 )
 
 [node name="Druplicon" parent="." index="1" instance=ExtResource( 10 )]
 
