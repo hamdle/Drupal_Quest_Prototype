@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://OldDruplicon.gd" type="Script" id=1]
-[ext_resource path="res://druplicon-invert.png" type="Texture" id=2]
+[ext_resource path="res://drupal8-bug.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 15.8731
 
-[node name="OldDruplicon" type="KinematicBody2D"]
+[node name="OldDruplicon" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1

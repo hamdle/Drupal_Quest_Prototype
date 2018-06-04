@@ -16,7 +16,7 @@ height = 20.0
 custom_solver_bias = 0.0
 extents = Vector2( 8.43217, 10 )
 
-[node name="Druplicon" type="KinematicBody2D" index="0"]
+[node name="Druplicon" type="KinematicBody2D"]
 
 position = Vector2( 0, -10 )
 input_pickable = false
