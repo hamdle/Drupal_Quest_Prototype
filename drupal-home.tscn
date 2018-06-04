@@ -104,7 +104,7 @@ extents = Vector2( 617.135, 25.2876 )
 custom_solver_bias = 0.0
 extents = Vector2( 35.2592, 772.493 )
 
-[node name="Node1" type="Node" index="0"]
+[node name="Node1" type="Node"]
 
 [node name="LevelHome" type="Node2D" parent="." index="0"]
 
@@ -342,7 +342,7 @@ shape = SubResource( 18 )
 
 [node name="Druplicon" parent="." index="1" instance=ExtResource( 10 )]
 
-position = Vector2( 760.378, 149.966 )
+position = Vector2( 285.514, 840.677 )
 
 [node name="OldDruplicon" parent="." index="2" instance=ExtResource( 11 )]
 
@@ -351,14 +351,17 @@ position = Vector2( 149.341, 856.513 )
 [node name="BigD8" parent="." index="3" instance=ExtResource( 12 )]
 
 position = Vector2( 100, 852 )
-scale = Vector2( 1.33, 1.33 )
 STEP = 1.0
 BOUNCE_HEIGHT = 12
 
 [node name="BigD9" parent="." index="4" instance=ExtResource( 12 )]
 
 position = Vector2( 55, 852 )
-scale = Vector2( 1.33, 1.33 )
+BOUNCE_HEIGHT = 12
+
+[node name="BigD10" parent="." index="5" instance=ExtResource( 12 )]
+
+position = Vector2( 404.905, 195.16 )
 BOUNCE_HEIGHT = 12
 
 
